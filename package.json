@@ -1,0 +1,62 @@
+{
+  "name": "waterline-single-collection-inheritance",
+  "description":"Plugin for add single collection inheritance support to Waterline ORM",
+  "version": "0.0.1",
+  "homepage": "",
+  "contributors": [
+    {
+      "name": "garusis"
+    }
+  ],
+  "dependencies": {
+    "waterline": "~0.10.2",
+    "async": "~1.3.0",
+    "bluebird": "~2.9.25",
+    "lodash": "~3.9.1",
+    "waterline-schema": "~0.1.17"
+  },
+  "devDependencies": {
+    "codeclimate-test-reporter": "0.0.4",
+    "mocha": "~2.2.5",
+    "istanbul": "~0.3.14",
+    "should": "~6.0.3",
+    "sails-memory": "git+https://github.com/balderdashy/sails-memory.git",
+    "waterline-adapter-tests": "git+https://github.com/balderdashy/waterline-adapter-tests.git"
+  },
+  "keywords": [
+    "waterline",
+    "orm",
+    "mongodb",
+    "single",
+    "collection",
+    "inheritance",
+    "sails",
+    "sails.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://garusis@bitbucket.org/garusis/waterlinesinglecollectioninheritance.git"
+  },
+  "main": "./lib/wsci.js",
+  "scripts": {
+    "test": "make test",
+    "prepublish": "npm prune",
+    "browserify": "rm -rf .dist && mkdir .dist && browserify lib/wsci.js -s WSCI | uglifyjs > .dist/wsci.min.js",
+    "coverage": "make coverage"
+  },
+  "engines": {
+    "node": "*"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://bitbucket.org/garusis/waterlinesinglecollectioninheritance/issues/new"
+  },
+  "maintainers": [
+    {
+      "name": "garusis",
+      "email": "garusis@gmail.com"
+    }
+  ],
+  "directories": {},
+  "readme": "ERROR: No README data found!"
+}
