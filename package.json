@@ -1,6 +1,6 @@
 {
   "name": "waterline-single-collection-inheritance",
-  "description":"Plugin for add single collection inheritance support to Waterline ORM",
+  "description": "Plugin for add single collection inheritance support to Waterline ORM",
   "version": "0.0.1",
   "homepage": "",
   "contributors": [
@@ -42,7 +42,8 @@
     "test": "make test",
     "prepublish": "npm prune",
     "browserify": "rm -rf .dist && mkdir .dist && browserify lib/wsci.js -s WSCI | uglifyjs > .dist/wsci.min.js",
-    "coverage": "make coverage"
+    "coverage": "make coverage",
+    "start": "node ./lib/wsci.js"
   },
   "engines": {
     "node": "*"
