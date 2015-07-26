@@ -40,7 +40,7 @@
     "type": "git",
     "url": "git://garusis@bitbucket.org/jarvigames/sails-hooks-single-collection-inheritance.git"
   },
-  "main": "./lib/shsci.js",
+  "main": "main.js",
   "scripts": {
     "test": "make test",
     "prepublish": "npm prune",
