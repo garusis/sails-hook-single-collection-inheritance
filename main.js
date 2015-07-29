@@ -6,6 +6,18 @@
  */
 module.exports = function (sails) {
     return {
+        defaults: {
+            __configKey__: {
+                inheritanceStackKeyModel: "__shsci__inheritance_stack"
+            }
+        },
+        configure: function () {
 
+        },
+        initialize: function (cb) {
+
+            cb();
+        },
+        routes: {}
     };
 };
