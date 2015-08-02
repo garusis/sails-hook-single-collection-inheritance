@@ -5,18 +5,31 @@
  * @version 0.0.3
  */
 module.exports = function (sails) {
+    var utils = require("./lib/shsci_utils")(sails);
+
     return {
         defaults: {
             __configKey__: {
-                inheritanceStackKeyModel: "__shsci__inheritance_stack"
+                discriminatorInheritanceKey: "__shsci__discriminator_stack"
             }
         },
         configure: function () {
-
         },
-        initialize: function (cb) {
+        initialize: function (done) {
 
-            cb();
+            var evtsToWaitFor = [];
+            if(sails.hooks.orm){
+                evtsToWaitFor.push('hook:orm:loaded');
+            }
+
+            if(sails.hooks.pubsub){
+                evtsToWaitFor.push('hook:pubsub:loaded');
+            }
+
+            sails.after(evtsToWaitFor, function() {
+                    utils.patch();
+                    done();
+                });
         },
         routes: {}
     };
