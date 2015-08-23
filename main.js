@@ -32,8 +32,6 @@ module.exports = function (sails) {
                 discriminatorInheritanceKey: "__shsci__discriminator_stack"
             }
         },
-        configure: function () {
-        },
         initialize: function (done) {
             var evtsToWaitFor = [];
             if (sails.hooks.orm) {
