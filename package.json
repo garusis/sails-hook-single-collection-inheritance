@@ -1,7 +1,7 @@
 {
   "name": "sails-hook-single-collection-inheritance",
   "version": "0.0.3",
-  "private": true,
+  "private": false,
   "description": "Sails JS hook to allow single collection inheritance in models",
   "repository": {
     "type": "git",
